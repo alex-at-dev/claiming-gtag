@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .checkbox-label {
+    @apply relative pl-11 pt-1;
+  }
+  .checkbox-label:before,
+  .checkbox-label:after {
+    content: '';
+    @apply absolute left-0 top-0 block h-8 w-8 rounded border border-neutral-300;
+  }
+
+  .checkbox-label:after {
+    content: '✓';
+    @apply hidden items-center justify-center text-2xl font-bold text-white;
+  }
+
+  input[type='checkbox']:checked + .checkbox-label:after {
+    @apply bg-olive-600;
+    @apply flex;
+  }
+}
