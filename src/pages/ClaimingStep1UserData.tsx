@@ -26,7 +26,7 @@ export const ClaimingStep1UserData = () => {
   return (
     <FormFunnelCard>
       <H2>Benutzerkonto anlegen</H2>
-      <div className="text-sapphire-700 font-bold">Schritt 1 von 2</div>
+      <div className="font-bold text-sapphire-700">Schritt 1 von 2</div>
 
       <form className="my-5 flex flex-col gap-8" onSubmit={handleSubmit}>
         <FormFieldText
@@ -46,6 +46,7 @@ export const ClaimingStep1UserData = () => {
           description="Dieser Name wird angezeigt, wenn Sie eine Bewertung verfassen und veröffentlichen."
           required
           defaultValue={name}
+          data-gaid="claiming_name"
         />
         <FormFieldText
           type="date"
@@ -55,11 +56,12 @@ export const ClaimingStep1UserData = () => {
           description="Hiermit stellen wir sicher, dass Sie volljährig sowie ggf. der rechtmäßige Inhaber Ihres Unternehmens sind."
           required
           defaultValue={birthday}
+          data-gaid="claiming_birthday"
         />
 
         <div className="flex justify-end gap-4">
           <Button secondary>Zurück</Button>
-          <Button primary type="submit">
+          <Button primary type="submit" data-gaid="claiming_goto_step2">
             Weiter zu Schritt 2
           </Button>
         </div>
