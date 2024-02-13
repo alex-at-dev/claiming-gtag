@@ -20,7 +20,7 @@ export const ClaimingStep2Password = () => {
     set({
       password: values.password + '',
       termsConfirmed: !!values['terms-confirmed'],
-      newsletterOptin: !!values['newsletter-optin'],
+      newsletterOptIn: !!values['newsletter-optin'],
     });
     navigate('../success');
   };
@@ -28,7 +28,7 @@ export const ClaimingStep2Password = () => {
   return (
     <FormFunnelCard>
       <H2>Ihr Password festlegen</H2>
-      <div className="text-sapphire-700 font-bold">Schritt 2 von 2</div>
+      <div className="font-bold text-sapphire-700">Schritt 2 von 2</div>
 
       <form className="my-5 flex flex-col gap-8" onSubmit={handleSubmit}>
         <FormField

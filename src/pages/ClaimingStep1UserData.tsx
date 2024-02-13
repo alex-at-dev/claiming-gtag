@@ -61,6 +61,7 @@ export const ClaimingStep1UserData = () => {
 
         <div className="flex justify-end gap-4">
           <Button secondary>Zurück</Button>
+          {/* data-gaid added here just for testing purposes. Don't implement this for prod. */}
           <Button primary type="submit" data-gaid="claiming_goto_step2">
             Weiter zu Schritt 2
           </Button>
